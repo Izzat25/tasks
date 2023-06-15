@@ -1,6 +1,17 @@
 package main
 
-func main() {
+import (
+	"fmt"
+	"task/tasks"
+	"time"
+)
 
-print("Hello")
+func main() {
+	start := time.Now()
+	res := tasks.Surface(5)
+
+	fmt.Println(res)
+
+	timeElapsed := time.Since(start)
+	fmt.Printf("it took %s\n", timeElapsed)
 }
